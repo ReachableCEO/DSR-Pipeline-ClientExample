@@ -10,7 +10,7 @@ set -euo pipefail
 #Edit the below file to reflect your information
 ##################################################
 
-source "./StakeholderOutputVariables.env"
+source "../StakeholderOutputVariables.env"
 
 ####################################################
 ####################################################
@@ -37,9 +37,9 @@ export StakeholderOutputMarkdownInputFile="$1"
 
 echo "Cleaning up from previous runs..."
 
-rm $BUILDYAML_STAKEHOLDER_OUTPUT
-rm $StakeholderOutputMarkdownOutputFile
-rm $StakeholderOutputPDFOutputFile
+rm $BUILDYAML_STAKEHOLDER_OUTPUT || true
+rm $StakeholderOutputMarkdownOutputFile || true
+rm $StakeholderOutputPDFOutputFile || true
 
 echo "Combining markdown files into single input file for pandoc..."
 cat $StakeholderOutputMarkdownInputFile > $StakeholderOutputMarkdownOutputFile
