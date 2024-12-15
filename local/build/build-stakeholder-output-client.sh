@@ -41,10 +41,9 @@ rm $BUILDYAML_STAKEHOLDER_OUTPUT
 rm $StakeholderOutputMarkdownOutputFile
 rm $StakeholderOutputPDFOutputFile
 
-
 echo "Combining markdown files into single input file for pandoc..."
-
 cat $StakeholderOutputMarkdownInputFile > $StakeholderOutputMarkdownOutputFile
 
 #Call the build stakeholder output microservice
+echo "Calling the build stakeholder output microservice..."
 bash ../../vendor/git.knownelement.com/reachableceo/DSR-Pipeline-Server/build/build-stakeholder-output-server.sh
