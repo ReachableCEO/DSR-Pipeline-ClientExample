@@ -1,2 +1,5 @@
-local/build-temp/
-local/build-output/
+local/build-temp/*.md
+local/build-temp/*.yml
+
+local/build-output/*.md
+local/build-output/*.pdf
