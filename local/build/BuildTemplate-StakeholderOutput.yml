@@ -1,4 +1,4 @@
-title: "{{ReportAuthor}} Daily Stakeholder Report - \today"
+title: "{{ReportAuthor}} Daily Stakeholder Report : \today"
 titlepage: true
 titlepage-logo: "{{CandidateLogo}}"
 date: \today
